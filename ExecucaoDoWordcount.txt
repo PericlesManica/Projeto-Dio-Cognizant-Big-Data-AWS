@@ -1,0 +1,92 @@
+manica@manica-Aspire-4820T:~/Downloads/ProjetoDioCognizante$ python3 wordcount.py -r emr s3://projeto-dio-cognizant/data/sherlock.txt --output-dir=s3://projeto-dio-cognizant/output/logs-01 --cloud-tmp-dir=s3://projeto-dio-cognizant/temp/
+
+Using configs in /home/manica/.mrjob.conf
+Creating temp directory /tmp/dio-live-wordcount-test.manica.20211020.205401.321511
+uploading working dir files to s3://projeto-dio-cognizant/temp/dio-live-wordcount-test.manica.20211020.205401.321511/files/wd...
+Copying other local files to s3://projeto-dio-cognizant/temp/dio-live-wordcount-test.manica.20211020.205401.321511/files/
+Created new cluster j-2CJ0AO67F50N4
+Added EMR tags to cluster j-2CJ0AO67F50N4: __mrjob_label=dio-live-wordcount-test, __mrjob_owner=manica, __mrjob_version=0.7.4
+Waiting for Step 1 of 1 (s-ZGBBBD809QKA) to complete...
+  PENDING (cluster is STARTING)
+  PENDING (cluster is STARTING)
+  PENDING (cluster is STARTING)
+  PENDING (cluster is STARTING: Configuring cluster software)
+  master node is ec2-54-218-27-34.us-west-2.compute.amazonaws.com
+  COMPLETED
+Attempting to fetch counters from logs...
+Looking for step log in /mnt/var/log/hadoop/steps/s-ZGBBBD809QKA on ec2-54-218-27-34.us-west-2.compute.amazonaws.com...
+Looking for step log in s3://projeto-dio-cognizant/temp/logs/j-2CJ0AO67F50N4/steps/s-ZGBBBD809QKA...
+  Parsing step log: s3://projeto-dio-cognizant/temp/logs/j-2CJ0AO67F50N4/steps/s-ZGBBBD809QKA/syslog.gz
+Counters: 60
+	File Input Format Counters 
+		Bytes Read=631052
+	File Output Format Counters 
+		Bytes Written=99128
+	File System Counters
+		FILE: Number of bytes read=128354
+		FILE: Number of bytes written=4492996
+		FILE: Number of large read operations=0
+		FILE: Number of read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=1152
+		HDFS: Number of bytes read erasure-coded=0
+		HDFS: Number of bytes written=0
+		HDFS: Number of large read operations=0
+		HDFS: Number of read operations=12
+		HDFS: Number of write operations=0
+		S3: Number of bytes read=631052
+		S3: Number of bytes written=99128
+		S3: Number of large read operations=0
+		S3: Number of read operations=0
+		S3: Number of write operations=0
+	Job Counters 
+		Data-local map tasks=12
+		Killed map tasks=1
+		Launched map tasks=12
+		Launched reduce tasks=5
+		Total megabyte-milliseconds taken by all map tasks=492146688
+		Total megabyte-milliseconds taken by all reduce tasks=179607552
+		Total time spent by all map tasks (ms)=160204
+		Total time spent by all maps in occupied slots (ms)=15379584
+		Total time spent by all reduce tasks (ms)=29233
+		Total time spent by all reduces in occupied slots (ms)=5612736
+		Total vcore-milliseconds taken by all map tasks=160204
+		Total vcore-milliseconds taken by all reduce tasks=29233
+	Map-Reduce Framework
+		CPU time spent (ms)=38280
+		Combine input records=0
+		Combine output records=0
+		Failed Shuffles=0
+		GC time elapsed (ms)=5491
+		Input split bytes=1152
+		Map input records=12303
+		Map output bytes=993515
+		Map output materialized bytes=253575
+		Map output records=109168
+		Merged Map outputs=60
+		Peak Map Physical memory (bytes)=907608064
+		Peak Map Virtual memory (bytes)=4493873152
+		Peak Reduce Physical memory (bytes)=507158528
+		Peak Reduce Virtual memory (bytes)=7127556096
+		Physical memory (bytes) snapshot=8989605888
+		Reduce input groups=8190
+		Reduce input records=109168
+		Reduce output records=8190
+		Reduce shuffle bytes=253575
+		Shuffled Maps =60
+		Spilled Records=218336
+		Total committed heap usage (bytes)=8589934592
+		Virtual memory (bytes) snapshot=89111736320
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+job output is in s3://projeto-dio-cognizant/output/logs-01/
+Removing s3 temp directory s3://projeto-dio-cognizant/temp/dio-live-wordcount-test.manica.20211020.205401.321511/...
+Removing temp directory /tmp/dio-live-wordcount-test.manica.20211020.205401.321511...
+Removing log files in s3://projeto-dio-cognizant/temp/logs/j-2CJ0AO67F50N4/...
+Terminating cluster: j-2CJ0AO67F50N4
+
